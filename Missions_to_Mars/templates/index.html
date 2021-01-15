@@ -28,6 +28,9 @@
     {% for hemisphere in mars.mars_hemisphere %}
         {{ hemisphere.title }}
     {% endfor %}
+    {% for image in mars.mars_hemisphere %}
+        <img src="{{ image.img_url}}" alt="image.title">
+    {% endfor %}
     </div>
 </body>
 
