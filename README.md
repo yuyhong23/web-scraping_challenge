@@ -84,6 +84,7 @@ The web application scrapes various websites for data related to the Mission to 
     2. scrape.mars_py has the function for scraping
     3. app.py is the application
     4. templates folder contains the index.html
+    5. web screenshots 1 & 2 (it was too big to capture everything in one screenshot)
 
 # Process and Credits
 
