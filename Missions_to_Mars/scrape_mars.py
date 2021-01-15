@@ -52,7 +52,7 @@ def scrape_info():
     html_table = facts_df.to_html()
 
     # Strip unwanted newlines to clean up the table
-    html_table.replace('\n', '')
+    html_table = html_table.replace('\n', '')
 
     #MARS HEMISPHERE
 
