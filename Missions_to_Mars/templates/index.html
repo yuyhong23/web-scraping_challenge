@@ -30,17 +30,20 @@
     
     <h2 style="background-color:rgba(141, 43, 4, 0.719); text-align:center;">
         Mars Hemisphere</h2>
-    {% for image in mars.mars_hemisphere %}
     <div class="container">
-        <div class="col-md-6">
-            <div class="card" style="width: 15rem;">
-                <img src="{{ image.img_url}}" class="card-img-top" alt="image.title">
-                <div class="card-body">
-                <p class="card-text">{{image.title}}</p>
-            </div>
-        </div>
-    </div>             
-    {% endfor %}
+        <div class="row">
+            {% for image in mars.mars_hemisphere %}
+                <div class="col-md-6 col-lg-3">
+                    <div class="card-block">
+                        <img src="{{ image.img_url}}" class="card-img-top" alt="image.title">
+                        <div class="card-body">
+                            <p class="card-text">{{image.title}}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>  
+    </div>           
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
