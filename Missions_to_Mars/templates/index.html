@@ -7,32 +7,37 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mission to Mars</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-  <link rel="stylesheet" href="/static/css/style.css">
 </head>
 
 <body>
     <div class="container-fluid">
-        <div class="jumbotron text-center">
-          <h1>Mission to Mars</h1>
+        <div class="jumbotron text-center" style="background-color:rgba(141, 64, 12, 0.87);">
+          <h1 class="display-4"><b>Mission to Mars</b></h1>
           <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data!</a></p>
         </div>
-    <h4>Latest Mars News</h4>
-    <h6>{{mars.latest_news_title}}</h6>
+    <h4 style="background-color:cadetblue;">Latest Mars News</h4>
+    <h6><b>{{mars.latest_news_title}}</b></h6>
     <p>{{mars.latest_news_paragraph}}</p>
     <br>
-    <h4>Mars Facts</h4>
+    <h4 style="background-color:cadetblue;">Mars Facts</h4>
     <div>
         {{mars.mars_fact|safe}}
     </div>
-    <div>
-    <h2>Mars Hemisphere</h4>
-    {% for hemisphere in mars.mars_hemisphere %}
-        {{ hemisphere.title }}
-    {% endfor %}
+    <br>
+    
+    <h2 style="background-color:rgba(141, 43, 4, 0.719); text-align:center;">
+        Mars Hemisphere</h2>
     {% for image in mars.mars_hemisphere %}
-        <img src="{{ image.img_url}}" alt="image.title">
+    <div class="container">
+        <div class="col-md-3">
+            <div class="card" style="width: 20rem;">
+                <img src="{{ image.img_url}}" class="card-img-top" alt="image.title">
+                <div class="card-body">
+                <p class="card-text">{{image.title}}</p>
+            </div>
+        </div>
+    </div>             
     {% endfor %}
-    </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
