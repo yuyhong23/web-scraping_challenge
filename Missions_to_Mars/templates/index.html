@@ -25,7 +25,9 @@
     </div>
     <div>
     <h2>Mars Hemisphere</h4>
-    {{mars.mars_hemisphere[0]["title"]}}
+    {% for hemisphere in mars.mars_hemisphere %}
+        {{ hemisphere.title }}
+    {% endfor %}
     </div>
 </body>
 
