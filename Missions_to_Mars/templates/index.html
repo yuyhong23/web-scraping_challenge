@@ -15,13 +15,16 @@
           <h1 class="display-4"><b>Mission to Mars</b></h1>
           <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data!</a></p>
         </div>
-    <h4 style="background-color:cadetblue;">Latest Mars News</h4>
+    <h4 style="background-color:rgba(141, 43, 4, 0.719);text-align:center;">
+        Latest Mars News</h4>
     <h6><b>{{mars.latest_news_title}}</b></h6>
     <p>{{mars.latest_news_paragraph}}</p>
     <br>
-    <h4 style="background-color:cadetblue;">Mars Facts</h4>
-    <div>
-        {{mars.mars_fact|safe}}
+    <h4 style="background-color:rgba(141, 43, 4, 0.719);text-align:center;">Mars Facts</h4>
+    <div class="container">
+        <div class="col-md-12">
+            {{mars.mars_fact|safe}}
+        </div>
     </div>
     <br>
     
@@ -29,8 +32,8 @@
         Mars Hemisphere</h2>
     {% for image in mars.mars_hemisphere %}
     <div class="container">
-        <div class="col-md-3">
-            <div class="card" style="width: 20rem;">
+        <div class="col-md-6">
+            <div class="card" style="width: 15rem;">
                 <img src="{{ image.img_url}}" class="card-img-top" alt="image.title">
                 <div class="card-body">
                 <p class="card-text">{{image.title}}</p>
